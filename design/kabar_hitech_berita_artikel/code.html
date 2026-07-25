@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kabar Hitech | SMPN 1 Hitech</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#00285d",
+                    "surface-container-highest": "#2d3449",
+                    "background": "#0b1326",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "on-secondary-fixed": "#001f26",
+                    "tertiary-container": "#ca8100",
+                    "on-secondary": "#003640",
+                    "on-primary-fixed-variant": "#004395",
+                    "secondary": "#4cd7f6",
+                    "primary-fixed": "#d8e2ff",
+                    "on-tertiary-container": "#3e2400",
+                    "secondary-fixed-dim": "#4cd7f6",
+                    "surface-container": "#171f33",
+                    "surface-container-high": "#222a3d",
+                    "surface": "#0b1326",
+                    "primary": "#adc6ff",
+                    "on-primary-fixed": "#001a42",
+                    "surface-bright": "#31394d",
+                    "on-secondary-container": "#00424e",
+                    "surface-container-low": "#131b2e",
+                    "inverse-on-surface": "#283044",
+                    "tertiary-fixed": "#ffddb8",
+                    "tertiary": "#ffb95f",
+                    "on-primary": "#002e6a",
+                    "on-tertiary-fixed": "#2a1700",
+                    "inverse-surface": "#dae2fd",
+                    "error": "#ffb4ab",
+                    "on-error": "#690005",
+                    "on-secondary-fixed-variant": "#004e5c",
+                    "secondary-fixed": "#acedff",
+                    "on-tertiary": "#472a00",
+                    "outline": "#8c909f",
+                    "primary-container": "#4d8eff",
+                    "on-error-container": "#ffdad6",
+                    "surface-dim": "#0b1326",
+                    "secondary-container": "#03b5d3",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "surface-variant": "#2d3449",
+                    "inverse-primary": "#005ac2",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-surface": "#dae2fd",
+                    "surface-container-lowest": "#060e20",
+                    "surface-tint": "#adc6ff",
+                    "on-background": "#dae2fd",
+                    "outline-variant": "#424754",
+                    "on-surface-variant": "#c2c6d6",
+                    "error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-page": "40px",
+                    "stack-lg": "64px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "stack-md": "32px",
+                    "container-max": "1280px",
+                    "stack-sm": "16px"
+            },
+            "fontFamily": {
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["JetBrains Mono"],
+                    "label-md": ["JetBrains Mono"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "title-lg": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 15px rgba(76, 215, 246, 0.3);
+        }
+        .neon-glow-amber {
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+        }
+        .data-scan-line {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #4cd7f6, transparent);
+            position: absolute;
+            animation: scan 3s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0%; opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { top: 100%; opacity: 0; }
+        }
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+        }
+        /* Custom scrollbar for horizontal filter */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-secondary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-container/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_15px_rgba(76,215,246,0.1)]">
+<div class="flex justify-between items-center px-margin-page py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-title-lg text-title-lg font-bold text-secondary tracking-tighter">SMPN 1 Hitech</span>
+<div class="hidden md:flex bg-surface-container-low px-4 py-2 rounded-lg border border-white/5 items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-md font-label-md text-on-surface placeholder:text-on-surface-variant/40 w-48" placeholder="Cari..." type="text"/>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-stack-sm">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors hover:scale-105 transition-transform duration-200" href="#">Profil</a>
+<a class="font-label-md text-label-md text-secondary border-b-2 border-secondary pb-1 hover:scale-105 transition-transform duration-200" href="#">Akademik</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors hover:scale-105 transition-transform duration-200" href="#">Kesiswaan</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors hover:scale-105 transition-transform duration-200" href="#">Portal Hub</a>
+<button class="ml-4 px-6 py-2 bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white font-label-md text-label-md rounded-lg neon-glow-amber active:scale-95 transition-all duration-100">PPDB Portal</button>
+</div>
+<button class="md:hidden text-secondary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24 pb-stack-lg">
+<!-- News Hero Section -->
+<section class="px-margin-page max-w-container-max mx-auto mb-stack-lg">
+<div class="relative h-[500px] md:h-[600px] rounded-xl overflow-hidden border border-white/10 group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic, wide-angle shot of a group of diverse middle school students standing proudly behind a futuristic humanoid robot they built. The setting is a high-tech laboratory with glowing blue interfaces and clean white surfaces at SMPN 1 Hitech. The lighting is dramatic, with cool cyan neon accents contrasting against a dark, professional navy background. The mood is triumphant and innovative, capturing a moment of international victory in robotics." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDex95Q-FWaeB8vApGW3tMewRfoBJVQESdIgPZxhkVdDGOQo-cukD8NEDkUu8Q7odLv8VruinRq11UW2_9aEvss7dBnTqbK1TqXWOYEo1KkPJcXkNMVz1xwhpsiPdWoBkIFoa7kqjkGKBTRIv1BMyyOPyKSbusbjPHHj3gcJEGEL0sv1iX6uZus3aACT0e2JsFx6PGV5uWnvh_hRORxm89zis4zSLR9yEpX37xNptzD1MSn6ZCCV48LsAJaj7DQHia01C8HyIA4g4o')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<!-- Floating Overlay -->
+<div class="absolute bottom-10 left-10 right-10 md:left-12 md:bottom-12 max-w-3xl">
+<div class="glass-panel p-8 rounded-xl border-secondary/20 relative overflow-hidden">
+<div class="data-scan-line"></div>
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-secondary/20 text-secondary text-label-sm font-label-sm px-3 py-1 rounded border border-secondary/30 uppercase tracking-widest">Featured</span>
+<span class="text-on-surface-variant text-label-sm font-label-sm">18 OKT 2024</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-white mb-6">SMPN 1 Hitech Menjuarai Kompetisi Robotik Internasional di Tokyo</h1>
+<p class="text-on-surface-variant text-body-lg mb-8 line-clamp-2">Tim robotik sekolah berhasil mengalahkan perwakilan dari 24 negara melalui inovasi robot penyelamat berbasis AI yang mereka kembangkan di Command Center sekolah.</p>
+<button class="group flex items-center gap-3 px-8 py-4 bg-primary text-on-primary font-bold rounded-lg hover:scale-105 active:scale-95 transition-all duration-200 neon-glow-primary">
+                            Baca Selengkapnya
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Filter Bar -->
+<section class="px-margin-page max-w-container-max mx-auto mb-stack-md">
+<div class="flex items-center justify-between border-b border-white/5 pb-4 overflow-x-auto hide-scrollbar">
+<div class="flex items-center gap-2">
+<button class="px-6 py-3 rounded-lg bg-secondary text-on-secondary-container font-label-md text-label-md neon-glow-primary transition-all whitespace-nowrap">Semua</button>
+<button class="px-6 py-3 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-white/5 font-label-md text-label-md transition-all whitespace-nowrap">Prestasi</button>
+<button class="px-6 py-3 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-white/5 font-label-md text-label-md transition-all whitespace-nowrap">Inovasi</button>
+<button class="px-6 py-3 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-white/5 font-label-md text-label-md transition-all whitespace-nowrap">Kegiatan</button>
+<button class="px-6 py-3 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-white/5 font-label-md text-label-md transition-all whitespace-nowrap">Pengumuman</button>
+</div>
+<div class="hidden lg:flex items-center gap-4 text-on-surface-variant font-label-sm uppercase tracking-widest text-[10px]">
+<span>Urutkan: Terbaru</span>
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+</div>
+</div>
+</section>
+<!-- News Grid -->
+<section class="px-margin-page max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- News Card 1 -->
+<article class="group bg-surface-container-low rounded-xl border border-white/5 overflow-hidden flex flex-col hover:border-secondary/40 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A clean, high-tech classroom at SMPN 1 Hitech featuring advanced digital whiteboards and students using sleek laptops. The lighting is bright and modern, emphasizing the innovative learning environment. The image uses a cool blue and white color scheme consistent with the modern-hitech visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ2lA6fwKOsPHFuBwFroVfFGzQdape3GQGQtOhzh7PFBZPm-B5507Me6XST7Y3ipJPFnMoF1AWEBOh2oLiKqXLi_jHSXQE1vjrX6D5Ngj8arZW3Bvyz3Lz9fxGJH4VPfp4Ixr7cKPQM6oW2K_eMQGrDwAgvORUjUPAKOHf7HeNZZY7WYLJamlrnsvUWgWYoJ5BwWP0ceZhLkwpJX9i3FywFG_Xiz3bqB88BYxjxvoHt5JOxnw05adROYc4b-Uqt9wzGkANSs9dTOM"/>
+<div class="absolute top-4 left-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded text-secondary font-label-sm text-[10px] uppercase border border-secondary/20">Inovasi</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<time class="text-on-surface-variant font-label-sm text-[12px] mb-3">15 OKT 2024</time>
+<h3 class="font-title-lg text-title-lg text-white mb-3 leading-tight group-hover:text-secondary transition-colors">Implementasi Kurikulum Metaverse di Laboratorium Digital</h3>
+<p class="text-on-surface-variant text-body-md line-clamp-2 mb-6">SMPN 1 Hitech resmi meluncurkan modul pembelajaran berbasis Virtual Reality untuk mata pelajaran Fisika dan Sejarah.</p>
+<div class="mt-auto flex items-center justify-between">
+<a class="flex items-center gap-2 text-secondary font-label-md text-label-md group-hover:gap-3 transition-all" href="#">
+                            Read More
+                            <span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+<span class="material-symbols-outlined text-on-surface-variant/30">share</span>
+</div>
+</div>
+</article>
+<!-- News Card 2 -->
+<article class="group bg-surface-container-low rounded-xl border border-white/5 overflow-hidden flex flex-col hover:border-secondary/40 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A vibrant shot of the SMPN 1 Hitech athletic field during a futuristic sports festival. Students are participating in high-tech sports activities under bright sunlight. The scene is energetic and professional, with clear blue skies and modern architectural elements of the school in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYw5syuXVptANTXt-BG67t0TBo5dt_Ic8nlqS8dmEgsn3A68tjA2twJPHwYL2JT6YDMIYuzkS1TpaqzS1wFQViWbp0pQ3poKQJT5VhgUPPiaV5thcIZMkzCepxw2jATJ820q0Bf-RpU8Ypmq2Qt-InbhCSn-hLK_ItCBgpF0vgf8LRanfphmAdGV1ZiDQ1VDdtySRsCbLgnCC1mnkIIofYYI2AniaskeA_GgEPYERZoe1UnlYHb4m8PTMDEqou89SXD4VZCV4DbTA"/>
+<div class="absolute top-4 left-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded text-secondary font-label-sm text-[10px] uppercase border border-secondary/20">Kegiatan</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<time class="text-on-surface-variant font-label-sm text-[12px] mb-3">12 OKT 2024</time>
+<h3 class="font-title-lg text-title-lg text-white mb-3 leading-tight group-hover:text-secondary transition-colors">Hitech Olympic 2024: Integrasi Esports dan Atletik</h3>
+<p class="text-on-surface-variant text-body-md line-clamp-2 mb-6">Pekan olahraga tahunan sekolah kali ini menghadirkan kompetisi teknologi pendukung performa atlet siswa.</p>
+<div class="mt-auto flex items-center justify-between">
+<a class="flex items-center gap-2 text-secondary font-label-md text-label-md group-hover:gap-3 transition-all" href="#">
+                            Read More
+                            <span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+<span class="material-symbols-outlined text-on-surface-variant/30">share</span>
+</div>
+</div>
+</article>
+<!-- News Card 3 -->
+<article class="group bg-surface-container-low rounded-xl border border-white/5 overflow-hidden flex flex-col hover:border-secondary/40 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional close-up of a student speaking at a digital podium during a school announcement at SMPN 1 Hitech. The background features a large holographic display showing school achievement data. The lighting is focused and cinematic, emphasizing excellence and professional communication in an academic setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLaGnCipTMetlUpTYiwQf9vq4Mwjeq_6AruWVUms7tKv_nClYhv6qqvGcjG1O7bnzDFQli8A25YqQoX2JisdgO6NG2Ksb7G7ki5rnuonDYXmIwJfR8QNiKFdJezYwbMd9bklB3WqGRadtrJBjU6F9O9eupGRtp0osNFwSfrV_I_0CdnCLyaKOqP6NE531UWPLoRVRvrnVTKbUOL_81juBv_Vd-S0spn1zA5lFKyX2512U_Ec5aYwdY3YDYV6i6b7TX9OtzKsPmpyQ"/>
+<div class="absolute top-4 left-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded text-secondary font-label-sm text-[10px] uppercase border border-secondary/20">Pengumuman</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<time class="text-on-surface-variant font-label-sm text-[12px] mb-3">10 OKT 2024</time>
+<h3 class="font-title-lg text-title-lg text-white mb-3 leading-tight group-hover:text-secondary transition-colors">Jadwal Seleksi PPDB Jalur Prestasi Teknologi</h3>
+<p class="text-on-surface-variant text-body-md line-clamp-2 mb-6">Penerimaan siswa baru jalur khusus talenta digital akan segera dibuka melalui portal resmi sekolah.</p>
+<div class="mt-auto flex items-center justify-between">
+<a class="flex items-center gap-2 text-secondary font-label-md text-label-md group-hover:gap-3 transition-all" href="#">
+                            Read More
+                            <span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+<span class="material-symbols-outlined text-on-surface-variant/30">share</span>
+</div>
+</div>
+</article>
+<!-- News Card 4 -->
+<article class="group bg-surface-container-low rounded-xl border border-white/5 overflow-hidden flex flex-col hover:border-secondary/40 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An artistic shot of a green school garden integrated with hydroponic systems and smart sensors. The scene is lush and technologically advanced, with small glowing indicators on the plant modules. The style is eco-hitech, combining nature with precise engineering at SMPN 1 Hitech." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNNB598Ue7CmOcdr9AR1SEMVBuHSyjDgsE2dy6lu7tBqNcNYhQ55NWuEfsxQiTyWULEBbUbuDbR5e3TXCqrJEz3yos184WdpqxolqYU998eY3r8W5S4HLdJLl8fVQMWV5CQzGigDyxTxBNxwnfnIRRQwtQe5ksGZNeO-jsYH-rJ6j87udVDYZuz-1y9dFfL96U0g-EAAZXnM-7jnx52x3zF-M0xJRxjY-8hLEBNU8V1Ix_K_OLVelBqfbCCvOM5GBgFmkzw36cfFk"/>
+<div class="absolute top-4 left-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded text-secondary font-label-sm text-[10px] uppercase border border-secondary/20">Inovasi</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<time class="text-on-surface-variant font-label-sm text-[12px] mb-3">08 OKT 2024</time>
+<h3 class="font-title-lg text-title-lg text-white mb-3 leading-tight group-hover:text-secondary transition-colors">Smart Garden: Proyek Ekologi Berbasis IoT Siswa Kelas 9</h3>
+<p class="text-on-surface-variant text-body-md line-clamp-2 mb-6">Siswa berhasil mengintegrasikan sensor kelembaban tanah dengan sistem penyiraman otomatis tenaga surya.</p>
+<div class="mt-auto flex items-center justify-between">
+<a class="flex items-center gap-2 text-secondary font-label-md text-label-md group-hover:gap-3 transition-all" href="#">
+                            Read More
+                            <span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+<span class="material-symbols-outlined text-on-surface-variant/30">share</span>
+</div>
+</div>
+</article>
+<!-- News Card 5 -->
+<article class="group bg-surface-container-low rounded-xl border border-white/5 overflow-hidden flex flex-col hover:border-secondary/40 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A wide shot of a prestigious award ceremony in a modern school auditorium. A student is receiving a trophy on stage with a large digital screen behind them displaying their name. The mood is celebratory and professional, using a rich palette of deep blues and gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWb0enYapKKrO_lYePs_v8-EipbSXyTm7W7sPlJE5SnzWdO8q1tBsJMKS1zPSY72HMKUYRsBADfRjsWWp3ZFGT1CQZ8bkpU5MZVzOkBcMjsCCEwvikxYtiDDW0B88ujEby2PgPYgUOG47Pj0UfC5FVMYAyD9TApwQmH2xAdcovRQd3Yr_ox1_cOHhWBJDMvhE0umYJJz-Ge8PueAxXeGwwWmegLvnxJpiaXU-g83MwYPPacgWubT-g4Z042Mx4n68mLPsBGHx4gXY"/>
+<div class="absolute top-4 left-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded text-secondary font-label-sm text-[10px] uppercase border border-secondary/20">Prestasi</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<time class="text-on-surface-variant font-label-sm text-[12px] mb-3">05 OKT 2024</time>
+<h3 class="font-title-lg text-title-lg text-white mb-3 leading-tight group-hover:text-secondary transition-colors">Medali Emas Olimpiade Sains Nasional Bidang Informatika</h3>
+<p class="text-on-surface-variant text-body-md line-clamp-2 mb-6">Dua siswa SMPN 1 Hitech meraih prestasi tertinggi dalam kompetisi pemrograman tingkat nasional.</p>
+<div class="mt-auto flex items-center justify-between">
+<a class="flex items-center gap-2 text-secondary font-label-md text-label-md group-hover:gap-3 transition-all" href="#">
+                            Read More
+                            <span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+<span class="material-symbols-outlined text-on-surface-variant/30">share</span>
+</div>
+</div>
+</article>
+<!-- News Card 6 -->
+<article class="group bg-surface-container-low rounded-xl border border-white/5 overflow-hidden flex flex-col hover:border-secondary/40 transition-all duration-300">
+<div class="relative h-56 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A classroom where students are engaged in a collaborative workshop, working with tablet devices and physical prototype models. The lighting is warm and encouraging, focusing on team interaction and creative problem solving in a high-tech academic environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhJKSW8Mkm-akDeGm5mUeglsgYg7depwRb77Y9Jyi8FPymAWoeCFhuVHHVDD1K2D_kBAkvYRgNoHXg676dzLz3sKn41038_L_uv6C5pz1fwnv3Sne8fPElpGtOVs5ud_Buz6aRiP2sp6KtymSyvu93Qr2EoCw54Oy_c0k6-CtAxogvbDQSzOyLWduYrDeUEGoAQK7M6mXaLNGhODqPAuamg7myxcfZlK8TMx-S0citP_cXZvceJhN_d3jgwONpcFEs3z-gGEmR2kU"/>
+<div class="absolute top-4 left-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded text-secondary font-label-sm text-[10px] uppercase border border-secondary/20">Kegiatan</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<time class="text-on-surface-variant font-label-sm text-[12px] mb-3">02 OKT 2024</time>
+<h3 class="font-title-lg text-title-lg text-white mb-3 leading-tight group-hover:text-secondary transition-colors">Workshop Literasi Digital: Etika Berinternet untuk Gen-Alpha</h3>
+<p class="text-on-surface-variant text-body-md line-clamp-2 mb-6">Program pembekalan bagi siswa untuk menjadi warga digital yang bijak dan bertanggung jawab.</p>
+<div class="mt-auto flex items-center justify-between">
+<a class="flex items-center gap-2 text-secondary font-label-md text-label-md group-hover:gap-3 transition-all" href="#">
+                            Read More
+                            <span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+<span class="material-symbols-outlined text-on-surface-variant/30">share</span>
+</div>
+</div>
+</article>
+</section>
+<!-- Pagination -->
+<section class="px-margin-page max-w-container-max mx-auto mt-stack-md flex justify-center">
+<div class="flex items-center gap-2 font-label-md text-label-md">
+<button class="w-12 h-12 flex items-center justify-center rounded-lg border border-white/5 text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-lg bg-secondary/10 border border-secondary/30 text-secondary neon-glow-primary">
+                    [ 01 ]
+                </button>
+<button class="w-12 h-12 flex items-center justify-center rounded-lg border border-white/5 text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all">
+                    02
+                </button>
+<button class="w-12 h-12 flex items-center justify-center rounded-lg border border-white/5 text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all">
+                    03
+                </button>
+<span class="text-on-surface-variant/40 mx-2">...</span>
+<button class="w-12 h-12 flex items-center justify-center rounded-lg border border-white/5 text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all">
+                    10
+                </button>
+<button class="w-12 h-12 flex items-center justify-center rounded-lg border border-white/5 text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full mt-stack-lg border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-page py-stack-md max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-secondary">SMPN 1 Hitech</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Membentuk pemimpin masa depan melalui inovasi teknologi dan integritas akademik.</p>
+<div class="flex gap-4 mt-2">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-title-lg text-title-lg text-white">Pranala Luar</h4>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-tertiary transition-colors font-body-md text-body-md" href="#">Contact</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-colors font-body-md text-body-md" href="#">Security</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-colors font-body-md text-body-md" href="#">Newsletter</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-title-lg text-title-lg text-white">Alamat</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">
+                    Jl. Teknologi Digital No. 101<br/>
+                    Jakarta Pusat, DKI Jakarta<br/>
+                    Indonesia, 10110
+                </p>
+<p class="font-body-md text-body-md text-secondary mt-4">© 2024 SMPN 1 Hitech. Excellence in Innovation.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for category filter
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => {
+                    b.classList.remove('bg-secondary', 'text-on-secondary-container', 'neon-glow-primary');
+                    b.classList.add('text-on-surface-variant');
+                });
+                btn.classList.add('bg-secondary', 'text-on-secondary-container', 'neon-glow-primary');
+                btn.classList.remove('text-on-surface-variant');
+            });
+        });
+
+        // Hover animation for news cards using JS for added atmospheric effect
+        document.querySelectorAll('article').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>
