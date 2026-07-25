@@ -12,6 +12,9 @@ export default function Header() {
           <Link className="text-secondary border-l-2 border-secondary pl-2 font-bold font-label-md text-label-md" to="/">
             Profil
           </Link>
+          <Link className="text-on-surface-variant font-medium font-label-md text-label-md hover:text-secondary hover:scale-105 transition-all duration-300" to="/profil-kepala-sekolah">
+            Kepala Sekolah
+          </Link>
           <Link className="text-on-surface-variant font-medium font-label-md text-label-md hover:text-secondary hover:scale-105 transition-all duration-300" to="/">
             Akademik
           </Link>

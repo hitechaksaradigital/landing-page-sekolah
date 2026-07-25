@@ -11,6 +11,7 @@ import BeritaKegiatan from './components/BeritaKegiatan'
 import Footer from './components/Footer'
 import FloatingBot from './components/FloatingBot'
 import NewsPage from './pages/NewsPage'
+import ProfilKepalaSekolah from './pages/ProfilKepalaSekolah'
 
 function App() {
   useEffect(() => {
@@ -84,6 +85,7 @@ function App() {
         }
       />
       <Route path="/berita" element={<NewsPage />} />
+      <Route path="/profil-kepala-sekolah" element={<ProfilKepalaSekolah />} />
     </Routes>
   )
 }

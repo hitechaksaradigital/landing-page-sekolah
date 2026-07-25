@@ -1,10 +1,11 @@
-
-import { useState } from 'react'
-
 type Category = 'Semua' | 'Prestasi' | 'Inovasi' | 'Kegiatan' | 'Pengumuman';
 
-export default function CategoryFilter() {
-  const [active, setActive] = useState<Category>('Semua');
+interface CategoryFilterProps {
+  activeCategory: Category;
+  onCategoryChange: (category: Category) => void;
+}
+
+export default function CategoryFilter({ activeCategory, onCategoryChange }: CategoryFilterProps) {
   const categories: Category[] = ['Semua', 'Prestasi', 'Inovasi', 'Kegiatan', 'Pengumuman'];
 
   return (
@@ -14,9 +15,9 @@ export default function CategoryFilter() {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setActive(cat)}
+              onClick={() => onCategoryChange(cat)}
               className={`px-6 py-3 rounded-lg font-label-md text-label-md transition-all whitespace-nowrap ${
-                active === cat
+                activeCategory === cat
                   ? 'bg-secondary text-on-secondary-container neon-glow-primary'
                   : 'text-on-surface-variant hover:text-secondary hover:bg-white/5'
               }`}
