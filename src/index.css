@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #0b1326;
+    color: #dae2fd;
+    overflow-x: hidden;
+}
+.glass-panel {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.hitech-glow:hover {
+    box-shadow: 0 0 20px rgba(76, 215, 246, 0.3);
+    border-color: #4cd7f6;
+}
+@keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+.scan-animation::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(76, 215, 246, 0.5), transparent);
+    animation: scanline 4s linear infinite;
+}
+.grid-overlay {
+    background-image: linear-gradient(rgba(76, 215, 246, 0.05) 1px, transparent 1px), 
+                      linear-gradient(90deg, rgba(76, 215, 246, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
