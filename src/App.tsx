@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Advantage from './components/Advantage'
@@ -9,6 +10,7 @@ import PortalHub from './components/PortalHub'
 import BeritaKegiatan from './components/BeritaKegiatan'
 import Footer from './components/Footer'
 import FloatingBot from './components/FloatingBot'
+import NewsPage from './pages/NewsPage'
 
 function App() {
   useEffect(() => {
@@ -63,18 +65,26 @@ function App() {
   }, [])
 
   return (
-    <main className="pt-20">
-      <Header />
-      <Hero />
-      <Advantage />
-      <Stats />
-      <Sambutan />
-      <VirtualCampus />
-      <PortalHub />
-      <BeritaKegiatan />
-      <Footer />
-      <FloatingBot />
-    </main>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <main className="pt-20">
+            <Header />
+            <Hero />
+            <Advantage />
+            <Stats />
+            <Sambutan />
+            <VirtualCampus />
+            <PortalHub />
+            <BeritaKegiatan />
+            <Footer />
+            <FloatingBot />
+          </main>
+        }
+      />
+      <Route path="/berita" element={<NewsPage />} />
+    </Routes>
   )
 }
 

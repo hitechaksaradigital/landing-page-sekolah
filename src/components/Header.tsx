@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -8,10 +9,18 @@ export default function Header() {
           <span className="font-headline-md text-headline-md font-bold text-primary tracking-tighter">SMPN 1 HITECH</span>
         </div>
         <nav className="hidden md:flex items-center gap-8">
-          <a className="text-secondary border-l-2 border-secondary pl-2 font-bold font-label-md text-label-md" href="#">Profil</a>
-          <a className="text-on-surface-variant font-medium font-label-md text-label-md hover:text-secondary hover:scale-105 transition-all duration-300" href="#">Akademik</a>
-          <a className="text-on-surface-variant font-medium font-label-md text-label-md hover:text-secondary hover:scale-105 transition-all duration-300" href="#">Kesiswaan</a>
-          <a className="text-on-surface-variant font-medium font-label-md text-label-md hover:text-secondary hover:scale-105 transition-all duration-300" href="#">Portal Hub</a>
+          <Link className="text-secondary border-l-2 border-secondary pl-2 font-bold font-label-md text-label-md" to="/">
+            Profil
+          </Link>
+          <Link className="text-on-surface-variant font-medium font-label-md text-label-md hover:text-secondary hover:scale-105 transition-all duration-300" to="/">
+            Akademik
+          </Link>
+          <Link className="text-on-surface-variant font-medium font-label-md text-label-md hover:text-secondary hover:scale-105 transition-all duration-300" to="/">
+            Kesiswaan
+          </Link>
+          <Link className="text-on-surface-variant font-medium font-label-md text-label-md hover:text-secondary hover:scale-105 transition-all duration-300" to="/berita">
+            Kabar Hitech
+          </Link>
         </nav>
         <div className="flex items-center gap-4">
           <div className="hidden lg:flex items-center bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant/30">

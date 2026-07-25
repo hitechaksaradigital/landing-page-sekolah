@@ -1,12 +1,14 @@
 
+import { Link } from 'react-router-dom'
+
 export default function BeritaKegiatan() {
   return (
     <section className="py-stack-lg px-margin-page max-w-container-max mx-auto">
       <div className="flex items-center justify-between mb-stack-md">
         <h2 className="font-headline-lg text-headline-lg">Kabar Hitech</h2>
-        <a className="text-secondary font-label-md flex items-center gap-2 hover:underline" href="#">
+        <Link className="text-secondary font-label-md flex items-center gap-2 hover:underline" to="/berita">
           Lihat Semua <span className="material-symbols-outlined text-sm">open_in_new</span>
-        </a>
+        </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
         <article className="glass-panel rounded-2xl overflow-hidden group">
